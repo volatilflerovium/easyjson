@@ -1,0 +1,143 @@
+true {"a":"b"}
+true {"a":"b", "c":"d"}
+true {"a":"b", "c":{"d":"e"}}
+true {"a":"b", "c":{"d":"e", "f":"g"}}
+true {"a":"b", "c":{"d":"e"}, "f":"g"}
+true {"a":{"b":"c", "d":{"e":"f"}}, "g":"h"}
+true {"a":"b", "c":{"d":"e", "f":"g"}, "h":"i", "j":{"k":{"l":"m"}, "n":{"o":"p"}}}
+true {"a":"b", "c":[{"d":"e"}], "f":"g"}
+true {"a":"b", "c":[1, 2, 3, 4], "f":"g"}
+true {"a":"b", "c":[1, 2, 3, 4], "j":"k"}
+true {"a":"b", "c":[{"d":"e"}, {"f":"g"}, {"h":"i"}], "j":"k"}
+true {"a":"b", "c":{"d":{"e":1}, "f":{"g":2}, "h":{"i":3}}, "j":"k"}
+true {"a":"b", "c":[{"d":"e"}, {"f":"g"}, {"h":"i"}], "j":"k"}
+true {"a":"b", "c":[{"d":"e", "f":"g"}, {"h":"i"}], "j":"k"}
+true {"a":["b", "c", "d", "e"]}
+true {"a":["b", "c", "d", "e"], "f":["g", "h", "i"]}
+true {"a":["b", "c", "d", "e"], "f":["g", "h", "i"], "j":{"k":["m", "n"]}}
+true {"a":"b", "c":[{"d":"e"}, {"f":["g", "i", "j"]}], "k":"l"}
+true {"a":"b", "c":[{"d":"e"}, {"f":[{"g":"i"}, {"j":"k"}]}], "l":"m"}
+false {"a":"b", "c":[{"d":]"e"}, {"f":[{"g":"i"}, {"j":"k"}]}], "l":"m"}
+false {"a":"b", "c":[{"d":{"e"}, {"f":[{"g":"i"}, {"j":"k"}]}], "l":"m"}
+true {"a":[1,2,3,4,5,6,7,1,2,3,4,5,16], "b":[1,2,3,4,5,6,7,0,1,2,3,4,5,16]}
+true {"a":[1,2,3,4,{"a":"b", "c":"d", "d":"e", "f":"g"},6,7,1,2,3,4,5,16], "b":[1,2,3,4,5,6,7,0,1,2,3,4,5,16]}
+false {"a":"b"},
+false {"a":"b"} dsfs gfd,
+false ["a", "b"],
+false {[]}
+true {"a":[]}
+true {"a":[{}]}
+true {"a":{}}
+true {"a":{"b":{"c":{}}}}
+false {"a":"b", "a":"b"}
+false {"a":"b", [1,2], "c":"5"}
+false {"a":"b", {"1":2}, "c":"5"}
+false {"a":[1, 1, ,"2"]}
+false {"a":[1, 1, "2"], ""s":3}
+true {}
+true []
+true [1,2,3,4]
+true [false, null, "false", {"a":3}, 4, {"e":true, "d":2} ]
+false {"a":[false, null, "false", "a":3, {"e":true, "d":2} ], "b":{"c":false}}
+false {"a":[false, null, "false", {"a":3}:4, {"e":true, "d":2} ], "b":{"c":false}}
+false {"a":false, {"a":3}:4, "e":true, "d":2}, "b":{"c":false}}
+false {"a":["b":false]}
+true {"a":{"b":false}}
+true {"a":"false"}
+true {"a":false}
+true {"a":"true"}
+true {"a":true}
+false {"a":truedo}
+true {"a":"null"}
+true {"a":null}
+true {"a":null }
+false {"a":null
+false {"a":null   
+false {"a":nullo}
+false {"a":null
+false {"a":falsee}
+false {"a": fa lsee}
+false {"a": truedo}
+false {"a": true do}
+false {"a":{["b":{}]}}
+false {  "message": "Coffee", "a": , "b":""}
+false {  "message": "Coffee", "cake}
+false {  "message": "Coffee", "cake":"sponge}
+true {"a":-123}
+true {"a":-123  ,   "b": 2 }
+true {"a":0.123}
+false {"a":-12-3}
+false {"a":12 3}
+false {"a": +12 3e10}
+true {"a":-123.0e-10}
+true {"a":-123.0E-10}
+false {"a":-123.0E--10}
+true {"a":-123.0e+10}
+false {"a":-123.0e}
+false {"a":-123.0e++10}
+false {"a":-123.0e+-10}
+false {"a":-123.0e-+10}
+false {"a":+123.0e-10}
+false {"a":+123}
+false {"a":1.2.3}
+true {"a": -123e+2, "b": -123E+2, "c": -123e2, "d": -123E2, "e": -123e-2, "f": -123E-2, "g": -123E-02}
+false {"a": -2.3E-2.3}
+false {"a": -2.3E+2.3}
+false {"a": 2e-1.4}
+false {"a": 0e-1}
+false {"a": 0e+1}
+false {"a": 0e+-1}
+false {"a": 1e-+1}
+false {"a": "\	"}
+false {"a":"c\1\ 2\ ub \ub123cda d"}
+false {"a":"\U1234c\1\ 2\ ub \ub123cda d"}
+false {"a":"\ua12p dsf34c\1\ 2\ ub \ub123cda d"}
+false {"a":"sddd \ua12p dsf34c\1\ 2\ ub \ub123cda d"}
+true {"a":"I \u0001F60D \u03A9  I 😍 Ω "}
+false {"a":"I \U0001F60D \u03A9  I 😍 Ω "}
+true {"a":"b\nc \tp \be", "c":"d"}
+false {"a":"b\nc \tp \be \a", "c":"d"}
+true {"a":"say \"Hello\" World", "c":"d"}
+false {"a":"b \c"}
+true {"a":"b \\c"}
+false {"a":"b \\\c"}
+true {"a":"b \\\\c"}
+false {"a":"b \\\\\c"}
+true {"a":"b \u0542"}
+true {"a":"b \\u0542"}
+true {"a":"b \\\u0542"}
+false {"a":\"say Hello"}
+false {"a":"say \"Hello\\" World"}
+true {"a":"say \"Hello\\\" World"}
+false {"a":"say \"Hello\\\\" World"}
+false {"a":"say \\"Hello\\\\" World"}
+true {"a":"b \t c"}
+true {"a":"b \\t c"}
+true {"a":"b \\\t c"}
+true {"a \"b\" c":"d"}
+//=============================
+false {"a":1
+false {"a"
+false ["a"
+false {a:2}
+false {'a':2}
+false {"a":'2'}
+false [1,2,]
+false {,"a":1}
+false [,1,2]
+false {"a":2}}
+false [1,2]]
+false {{"a":2}
+false [[1,2]
+false {"a":2 +3}
+false {"a":"\x15"}
+false {"a":"\015"}
+false [\abc]
+true [[[[[[[[[[["support very complex json"]]]]]]]]]]]
+false [1:2]
+false {"a","15"}
+false {"a":"15	tap"}
+false [0e] 
+false [e] 
+false {"a","15",
+false {"a": [["abcf"3]]}
