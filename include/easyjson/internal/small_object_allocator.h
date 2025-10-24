@@ -1,3 +1,11 @@
+/*********************************************************************
+* MemPool class                                       					*
+* Small_Object_Allocator class                                       *
+*                                                                    *
+* Version: 1.0                                                       *
+* Date:    23-09-2025                                                *
+* Author:  Dan Machado                                               *                                         *
+**********************************************************************/
 #ifndef SMALL_OBJECT_ALLOCATOR_H
 #define SMALL_OBJECT_ALLOCATOR_H
 

@@ -2,7 +2,6 @@
 * class JsonObj                                       					*
 * class JsonParser                                      					*
 *                                                                    *
-* Version: 1.0                                                       *
 * Date:    14-06-2025                                                *
 * Author:  Dan Machado                                               *                                         *
 **********************************************************************/

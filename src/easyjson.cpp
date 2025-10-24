@@ -1,3 +1,9 @@
+/*********************************************************************
+* JsonImpl class                               								*
+*                                                                    *
+* Date:    14-06-2025                                                *
+* Author:  Dan Machado                                               *                                         *
+**********************************************************************/
 #include "easyjson/easyjson.h"
 #include "easyjson/internal/json_utilities.h"
 #include "easyjson/internal/json_core.h"
