@@ -1,9 +1,9 @@
 /*********************************************************************
-* AVL_Tree class                               								*
+* Implementation of NodeJson struct                            		*
 *                                                                    *
 * Version: 1.0                                                       *
 * Date:    23-09-2019                                                *
-* Author:  Dan Machado                                               *                                         *
+* Author:  Dan Machado                                               *
 **********************************************************************/
 #include "easyjson/internal/json_core.h"
 

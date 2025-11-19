@@ -1,5 +1,6 @@
 /*********************************************************************
-* AVL_Tree class                               								*
+* JsonObjBuffer class                          								*
+* NodeJson struct                                                    *
 *                                                                    *
 * Version: 1.0                                                       *
 * Date:    23-09-2019                                                *

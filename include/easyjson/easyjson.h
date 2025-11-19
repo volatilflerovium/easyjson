@@ -1,6 +1,5 @@
 /*********************************************************************
 * class JsonObj                                       					*
-* class JsonParser                                      					*
 *                                                                    *
 * Date:    14-06-2025                                                *
 * Author:  Dan Machado                                               *                                         *

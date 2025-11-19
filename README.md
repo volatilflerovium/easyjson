@@ -5,18 +5,23 @@ json strings.
 ## Motivation
 
 While developing km_recorderAndPlayer I used a simple naive serialization/deserialization
-class for saving data to files. However I tried to replace it with one 
-of the most popular json libraries (nlohmann json). The performace was really poor.
-So I stuck with the naive aproach. Later I remember an old unfinished idea 
-that I worked on while develop my project fpdf-easytable, which involved 
-parsing nested html tags.
+class for saving data to files. However, I thought replacing it with
+one of the most popular json libraries (nlohmann json). The performance of nlohmann json
+is really poor compared to the solution used in the km_recorderAndPlayer project;
+so I stuck with the naive approach. Later I remembered an old unfinished idea
+that I worked on while develop my project fpdf-easytable, which involved
+parsing nested css-style tags. Implementing this idea for parsing json strings
+gave rise to easyjson.
+
+Despite the main algorithm is simple and with few optimization tricks,
+easyjson run, in most of the cases, as faster as RapidJson.
 
 ## Features:
 
 - Parse and generate JSON string according to the standard http://json.org/
   Nothing more nothing less.
 
-- Read and write JSON strings in UTF-8. the consensus is increasingly moving 
+- Read and write JSON strings in UTF-8. The consensus is increasingly moving 
   toward using UTF-8. Here two libraries for utf8 validation:
 
    https://github.com/simdutf/is_utf8
@@ -31,14 +36,14 @@ parsing nested html tags.
 ```
 	std::optional<T> value=obj["some_key"].getValue<T>();
 
-	or with more flexibility:
+	//or with more flexibility:
 
 	const char* value=obj["some_key"].getRawData();
 ```
 - Internally easyjson uses an AVL tree structure therefore lookup is done
   in O(ln N) time.
 
-- Easy to use:
+- Easy to use.
 
 
 ## Example
@@ -124,17 +129,17 @@ How does SimpleJson compare to 3 of the most popular C++ Json Lib:
 
 ### Code lines:
 
-easyjson:   3494 ( 7 files)
-rapijson  +16000 (38 files)
-sajson      2606 ( 1 file)
-nlohmann: +30000 ( 1 file)
+- easyjson:   3494 ( 7 files)
+- rapijson  +16000 (38 files)
+- sajson      2606 ( 1 file)
+- nlohmann: +30000 ( 1 file)
 
 ### Size of simple executable:
 
-easyjson:  47K
-rapijson   57K
-sajson:    57K
-nlohmann: 103K
+- easyjson:  47K
+- rapijson   57K
+- sajson:    57K
+- nlohmann: 103K
 
 ### Speed
 
